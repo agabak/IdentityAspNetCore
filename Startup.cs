@@ -1,5 +1,6 @@
 using IdentityAspNetCore.DbContexts;
 using IdentityAspNetCore.Models;
+using IdentityAspNetCore.Servies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,7 +33,7 @@ namespace IdentityAspNetCore
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultTokenProviders();
 
-
+            services.AddScoped<IUserService, UserService>();
             services.AddControllersWithViews();
         }
 
