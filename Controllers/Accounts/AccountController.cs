@@ -25,6 +25,7 @@ namespace IdentityAspNetCore.Controllers.Accounts
             var result = await _userService.RegisterUserAync(model);
             if(result.Succeeded)
             {
+              //  var isSignIn = await _userService.LoginUserAsync()
                 return View();
             }
             return View();

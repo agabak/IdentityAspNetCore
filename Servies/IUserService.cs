@@ -7,5 +7,6 @@ namespace IdentityAspNetCore.Servies
     public interface IUserService
     {
         Task<IdentityResult> RegisterUserAync(RegisterViewModel model);
+        Task<SignInResult> LoginUserAsync(LoginViewModel model, AppUser user)
     }
 }
